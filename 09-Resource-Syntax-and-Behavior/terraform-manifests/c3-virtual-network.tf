@@ -12,7 +12,7 @@ resource "azurerm_virtual_network" "myvnet" {
 
 # Resource-3: Create Subnet
 resource "azurerm_subnet" "mysubnet" {
-  name                 = "mysubnet-1"
+  name                 = "mysubnet-01"
   resource_group_name  = azurerm_resource_group.myrg.name
   virtual_network_name = azurerm_virtual_network.myvnet.name
   address_prefixes     = ["10.0.2.0/24"]
@@ -26,6 +26,7 @@ resource "azurerm_public_ip" "mypublicip" {
   allocation_method   = "Static"
   tags = {
     environment = "Dev"
+    extra = "my extra label"
   }
 }
 
