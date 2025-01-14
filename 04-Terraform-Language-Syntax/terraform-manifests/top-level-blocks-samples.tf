@@ -40,7 +40,7 @@ resource "azurerm_virtual_network" "myvnet" {
 # Block-4: Input Variables Block
 # Define a Input Variable for Azure Region 
 variable "azure_region" {
-  default = "eastus"
+  default = "westeu"
   description = "Azure Region where resources to be created"
   type = string
 }
@@ -70,7 +70,7 @@ output "id" {
 # Block-8: Modules Block
 # Azure Virtual Network Block using Terraform Modules (https://registry.terraform.io/modules/Azure/network/azurerm/latest)
 module "network" {
-  source              = "Azure/network/azurerm"
+  source              = "/network/azurerm"
   resource_group_name = azurerm_resource_group.example.name
   address_spaces      = ["10.0.0.0/16", "10.2.0.0/16"]
   subnet_prefixes     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]

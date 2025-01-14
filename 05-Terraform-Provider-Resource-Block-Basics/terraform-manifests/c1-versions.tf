@@ -1,10 +1,10 @@
 # Terraform Block
 terraform {
-  required_version = ">= 1.0.0"
+  required_version = "= 1.10.3"
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
-      version = ">= 2.0"
+      source = "registry.terraform.io/hashicorp/azurerm"
+      version = ">= 3.0"
       #version = "~> 2.0"             
       #version = ">= 2.0.0, < 2.60.0"
       #version = ">= 2.0.0, <= 2.64.0"   
@@ -14,7 +14,8 @@ terraform {
 }
 # Provider Block
 provider "azurerm" {
-features {}
+   features {}
+   subscription_id = "eee0563a-6259-42f3-b289-6d201645b2b5"
 }
 
 

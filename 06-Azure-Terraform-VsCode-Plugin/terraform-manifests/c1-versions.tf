@@ -9,8 +9,25 @@ terraform {
   }
 }
 
+data "azurerm_subscription" "current" {
+ 
+}
+
+## TEST DATASOURCES using OUTPUTS
+# 1. My Current Subscription Display Name
+output "current_subscription_display_name" {
+  value = data.azurerm_subscription.current.display_name
+}
+
+# 2. My Current Subscription Id
+output "current_subscription_id" {
+  value = data.azurerm_subscription.current.subscription_id
+}
+
 # Provider Block
 provider "azurerm" {
-features {}
+   features {}
+   subscription_id = data.azurerm_subscription.current.subscription_id
 }
 #
+
