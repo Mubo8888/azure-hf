@@ -23,7 +23,7 @@ subnet_name = "subnet-tfvars"
 ### dev.tfvars
 ```t
 environment = "dev"
-resoure_group_location = "eastus2"
+resoure_group_location = "westeurope"
 ```
 ### qa.tfvars
 ```t

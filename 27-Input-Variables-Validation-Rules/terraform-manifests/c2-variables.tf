@@ -24,8 +24,8 @@ variable "resoure_group_location" {
   type = string
   default = "eastus"
   validation {
-    condition = var.resoure_group_location == "eastus" || var.resoure_group_location =="eastus2"
-    #condition = contains(["eastus", "eastus2"], var.resoure_group_location)
+    condition = var.resoure_group_location == "eastus" || var.resoure_group_location =="westeurope"
+    #condition = contains(["eastus", "westeurope"], var.resoure_group_location)
     error_message = "We only allow Resources to be created in eastus or eastus2 locations."
     #condition = can(regex("india$", var.resoure_group_location))
     #error_message = "We only allow Resources to be created in westindia or southindia locations."
@@ -56,7 +56,7 @@ variable "public_ip_sku" {
   type = map(string)
   default = {
     "eastus" = "Basic"
-    "eastus2" = "Standard" 
+    "westeurope" = "Standard" 
     "westus"  = "Basic"
     "westus2" = "Standard" 
     "southindia" = "Basic"

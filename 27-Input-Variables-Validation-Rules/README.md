@@ -60,7 +60,7 @@ terraform console
 Template: contains(list, value)
 contains(["a", "b", "c"], "a")
 contains(["a", "b", "c"], "d")
-contains(["eastus", "eastus2"], "westus2")
+contains(["eastus", "westeurope"], "westus2")
 ```
 
 ## Step-05: Learn Terraform lower() and upper() Function
@@ -93,8 +93,8 @@ variable "resoure_group_location" {
   type = string
   default = "eastus"
   validation {
-    condition  = var.resoure_group_location == "eastus" || var.resoure_group_location == "eastus2"
-    #condition = contains(["eastus", "eastus2"], lower(var.resoure_group_location))
+    condition  = var.resoure_group_location == "eastus" || var.resoure_group_location == "westeurope"
+    #condition = contains(["eastus", "westeurope"], lower(var.resoure_group_location))
     error_message = "We only allow Resources to be created in eastus or eastus2 Locations."
   }  
 }
@@ -115,18 +115,18 @@ terraform plan
 
 # Observation
 1. When `resoure_group_location = "eastus"`, terraform plan should pass
-2. When `resoure_group_location = "eastus2"`, terraform plan should pass
+2. When `resoure_group_location = "westeurope"`, terraform plan should pass
 3. When `resoure_group_location = "westus"`, terraform plan should fail with error message as validation rule failed. 
 
 # Uncomment validation rule with contains() function and comment previous one
-condition = contains(["eastus", "eastus2"], lower(var.resoure_group_location))
+condition = contains(["eastus", "westeurope"], lower(var.resoure_group_location))
 
 # Review the terraform plan
 terraform plan
 
 # Observation
 1. When `resoure_group_location = "eastus"`, terraform plan should pass
-2. When `resoure_group_location = "eastus2"`, terraform plan should pass
+2. When `resoure_group_location = "westeurope"`, terraform plan should pass
 3. When `resoure_group_location = "westus"`, terraform plan should fail with error message as validation rule failed. 
 ```
 ## Step-08: Learn Terraform regex() and can() Function
@@ -158,8 +158,8 @@ variable "resoure_group_location" {
   type = string
   default = "eastus"
   validation {
-    #condition  = var.resoure_group_location == "eastus" || var.resoure_group_location == "eastus2"
-    #condition = contains(["eastus", "eastus2"], lower(var.resoure_group_location))
+    #condition  = var.resoure_group_location == "eastus" || var.resoure_group_location == "westeurope"
+    #condition = contains(["eastus", "westeurope"], lower(var.resoure_group_location))
     #error_message = "We only allow Resources to be created in eastus or eastus2 Locations."
     condition = can(regex("india$", var.resoure_group_location))
     error_message = "We only allow Resources to be created in westindia and southindia locations."
@@ -178,7 +178,7 @@ terraform plan
 # Observation
 1. When `resoure_group_location = "westinida"`, terraform plan should pass
 2. When `resoure_group_location = "southindia"`, terraform plan should pass
-3. When `resoure_group_location = "eastus2"`, terraform plan should fail with error message as validation rule failed. 
+3. When `resoure_group_location = "westeurope"`, terraform plan should fail with error message as validation rule failed. 
 ```
 
 ## Step-11: Clean-Up
@@ -194,8 +194,8 @@ variable "resoure_group_location" {
   type = string
   default = "eastus"
   validation {
-    condition  = var.resoure_group_location == "eastus" || var.resoure_group_location == "eastus2"
-    #condition = contains(["eastus", "eastus2"], lower(var.resoure_group_location))
+    condition  = var.resoure_group_location == "eastus" || var.resoure_group_location == "westeurope"
+    #condition = contains(["eastus", "westeurope"], lower(var.resoure_group_location))
     error_message = "We only allow Resources to be created in eastus or eastus2 Locations."
     #condition = can(regex("india$", var.resoure_group_location))
     #error_message = "We only allow Resources to be created in westindia and southindia locations."
@@ -206,7 +206,7 @@ variable "resoure_group_location" {
 resoure_group_location = "eastus"
 #resoure_group_location = "westus2"
 #resoure_group_location = "westindia"
-#resoure_group_location = "eastus2"
+#resoure_group_location = "westeurope"
 ```
 
 

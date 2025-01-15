@@ -17,7 +17,7 @@ variable "public_ip_sku" {
   type = map(string)
   default = {
     "eastus" = "Basic"
-    "eastus2" = "Standard" 
+    "westeurope" = "Standard" 
   }
 }
 
@@ -65,9 +65,9 @@ lookup({a="ay", b="bee"}, "b", "what?")
 lookup({a="ay", b="bee"}, "c", "what?")
 
 # Terraform lookup() Function with our map
-lookup({"eastus"="Basic", "eastus2"="Standard"},"eastus", "Basic")
-lookup({"eastus"="Basic", "eastus2"="Standard"},"eastus2", "Basic")
-lookup({"eastus"="Basic", "eastus2"="Standard"},"", "Basic")
+lookup({"eastus"="Basic", "westeurope"="Standard"},"eastus", "Basic")
+lookup({"eastus"="Basic", "westeurope"="Standard"},"westeurope", "Basic")
+lookup({"eastus"="Basic", "westeurope"="Standard"},"", "Basic")
 ```
 
 ## Step-05: Execute Terraform Commands

@@ -49,7 +49,7 @@ variable "public_ip_sku" {
   type = map(string)
   default = {
     "eastus" = "Basic",
-    "eastus2" = "Standard"
+    "westeurope" = "Standard"
   }
 }
 

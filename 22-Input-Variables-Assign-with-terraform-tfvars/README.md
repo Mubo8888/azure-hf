@@ -12,7 +12,7 @@ description: Learn Terraform Input Variables using terraform.tfvars
 business_unit = "it"
 environment = "stg"
 resoure_group_name = "rg-tfvars"
-resoure_group_location = "eastus2"
+resoure_group_location = "westeurope"
 virtual_network_name = "vnet-tfvars"
 subnet_name = "subnet-tfvars"
 ```

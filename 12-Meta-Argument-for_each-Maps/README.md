@@ -35,7 +35,7 @@ provider "azurerm" {
 resource "azurerm_resource_group" "myrg" {
   for_each = {
     dc1apps = "eastus"
-    dc2apps = "eastus2"
+    dc2apps = "westeurope"
     dc3apps = "westus"
   }
   name = "${each.key}-rg"
