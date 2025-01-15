@@ -12,6 +12,16 @@ description: Learn Terraform Input Variables using Environment Variables
 # Sample
 export TF_VAR_variable_name=value
 
+**** for WINDOWS ***
+## to display all
+Get-ChildItem Env:
+## to add one
+$env:TF_VAR_subnet_name = "Muriel2"
+## to display it
+$env:TF_VAR_subnet_name
+## to remove it
+$env:TF_VAR_subnet_name = $null
+
 # SET Environment Variables
 export TF_VAR_resoure_group_name=rgenv
 export TF_VAR_resoure_group_location=westus2
