@@ -22,7 +22,7 @@ variable "resource_group_name" {
 variable "resource_group_location" {
   description = "Resource Group Location"
   type = string
-  default = "East US"
+  default = "West Europe"
 }
 # 5. Virtual Network Name
 variable "virtual_network_name" {
