@@ -43,7 +43,7 @@ resource "random_string" "myrandom" {
   length = 6
   upper = false 
   special = false
-  number = false   
+  numeric = false   
 }
 ```
 ## Step-03: c2-resource-group.tf
@@ -51,7 +51,7 @@ resource "random_string" "myrandom" {
 # Resource-1: Azure Resource Group
 resource "azurerm_resource_group" "myrg" {
   name = "myrg-1"
-  location = "East US"
+  location = "West Europe"
 }
 ```
 

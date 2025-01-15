@@ -29,7 +29,7 @@ description: Learn Terraform Configuration Language Syntax like Blocks, Argument
 # Create a resource group
 resource "azurerm_resource_group" "myrg" { # Resource BLOCK
   name = "myrg-1" # Argument
-  location = "East US" # Argument 
+  location = "West Europe" # Argument 
 }
 # Create Virtual Network
 resource "azurerm_virtual_network" "myvnet" { # Resource BLOCK

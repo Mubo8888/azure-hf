@@ -25,7 +25,7 @@ description: Learn Terraform Resource Meta-Argument count
 # Resource-1: Azure Resource Group
 resource "azurerm_resource_group" "myrg" {
   name = "myrg-${count.index}"
-  location = "East US"
+  location = "West Europe"
   count = 3
 }
 ```
