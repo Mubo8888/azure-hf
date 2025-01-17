@@ -331,6 +331,7 @@ Observation:
 
 # Terraform Plan with -target
 terraform plan -target=azurerm_virtual_network.myvnet-new
+# terraform plan -target azurerm_virtual_network.myvnet-new
 Observation:
 1) Message: "Plan: 0 to add, 1 to change, 0 to destroy"
 2) It is updating Change-1 because we are targeting that resource "aws_instance.my-ec2-vm-new"
@@ -338,6 +339,7 @@ Observation:
 
 # Terraform Apply
 terraform apply -target=azurerm_virtual_network.myvnet-new
+# terraform apply -target azurerm_virtual_network.myvnet-new
 ```
 
 ## Step-09: Terraform Destroy & Clean-Up
