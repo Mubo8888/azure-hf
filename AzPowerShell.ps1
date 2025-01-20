@@ -8,6 +8,8 @@ Install-Module az -Scope AllUsers -Force
 
 Update-Module Az
 
+$PSVersionTable
+
 Connect-AzAccount
 
 Connect-AzAccount -UseDeviceAuthentication
