@@ -4,7 +4,7 @@ environment = "dev"
 
 # Resource Group Variables
 resoure_group_name = "rg"
-resoure_group_location = "eastus"
+resoure_group_location = "westeurope"
 
 # DB Variables
 db_name = "mydb201"

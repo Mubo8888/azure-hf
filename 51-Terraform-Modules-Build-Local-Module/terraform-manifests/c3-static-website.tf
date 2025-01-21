@@ -3,7 +3,7 @@ module "azure_static_website" {
   source = "./modules/azure-static-website" # Mandatory
 
   # Resource Group
-  location                          = "eastus"
+  location                          = "westeurope"
   resource_group_name               = "myrg1"
 
   # Storage Account

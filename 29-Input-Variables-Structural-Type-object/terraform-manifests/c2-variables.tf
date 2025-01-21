@@ -22,7 +22,7 @@ variable "resoure_group_name" {
 variable "resoure_group_location" {
   description = "Resource Group Location"
   type = string
-  default = "eastus"
+  default = "westeurope"
 }
 # 5. Common Tags
 variable "common_tags" {

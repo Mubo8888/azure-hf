@@ -48,7 +48,7 @@ variable "public_ip_sku" {
   description = "Azure Public IP Address SKU"
   type = map(string)
   default = {
-    "eastus" = "Basic",
+    "westeurope" = "Basic",
     "westeurope" = "Standard"
   }
 }

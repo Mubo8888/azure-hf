@@ -1,4 +1,4 @@
-location = "eastus"
+location = "westeurope"
 resource_group_name = "myrg1"
 storage_account_name = "staticwebsite"
 storage_account_tier = "Standard"

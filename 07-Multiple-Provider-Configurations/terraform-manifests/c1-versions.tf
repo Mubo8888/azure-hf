@@ -9,7 +9,7 @@ terraform {
   }
 }
 
-# Provider-1 for EastUS (Default Provider)
+# Provider-1 for westeurope (Default Provider)
 provider "azurerm" {
   features {}
 }

@@ -39,7 +39,7 @@ resource "azurerm_storage_account" "storage_account" {
 # Create New Resource Group
 resource "azurerm_resource_group" "resource_group2" {
   name     = "myrg2021"
-  location = "eastus"
+  location = "westeurope"
 }
 */
 

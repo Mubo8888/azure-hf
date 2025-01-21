@@ -18,7 +18,7 @@ module "azure_static_website" {
   #source = "git::https://github.com/stacksimplify/terraform-azurerm-staticwebsitepublic.git?ref=1.0.0"
 
   # Resource Group
-  location = "eastus"
+  location = "westeurope"
   resource_group_name = "myrg1"
 
   # Storage Account

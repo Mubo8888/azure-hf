@@ -22,11 +22,11 @@ variable "resoure_group_name" {
 variable "resoure_group_location" {
   description = "Resource Group Location"
   type = string
-  default = "eastus"
+  default = "westeurope"
   validation {
-    condition = var.resoure_group_location == "eastus" || var.resoure_group_location =="westeurope"
-    #condition = contains(["eastus", "westeurope"], var.resoure_group_location)
-    error_message = "We only allow Resources to be created in eastus or eastus2 locations."
+    condition = var.resoure_group_location == "westeurope" || var.resoure_group_location =="westeurope"
+    #condition = contains(["westeurope", "westeurope"], var.resoure_group_location)
+    error_message = "We only allow Resources to be created in westeurope or westeurope2 locations."
     #condition = can(regex("india$", var.resoure_group_location))
     #error_message = "We only allow Resources to be created in westindia or southindia locations."
   }
@@ -55,7 +55,7 @@ variable "public_ip_sku" {
   description = "Azure Public IP Address SKU"
   type = map(string)
   default = {
-    "eastus" = "Basic"
+    "westeurope" = "Basic"
     "westeurope" = "Standard" 
     "westus"  = "Basic"
     "westus2" = "Standard" 

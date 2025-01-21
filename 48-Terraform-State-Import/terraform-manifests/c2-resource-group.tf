@@ -5,7 +5,7 @@
 # Resource Group
 resource "azurerm_resource_group" "myrg" {
    name = "myrg1"
-   location = "eastus"
+   location = "westeurope"
    tags = {
      "Tag1" = "My-Tag-1"
    }

@@ -6,7 +6,7 @@ module "azure_static_website" {
   version = "1.0.0"
   
   # Resource Group
-  location            = "eastus"
+  location            = "westeurope"
   resource_group_name = "myrg1"
 
   # Storage Account
