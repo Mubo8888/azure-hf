@@ -1,8 +1,8 @@
 # Call our Custom Terraform Module which we built earlier
 module "azure_static_website" {
   #source = "./modules/azure-static-website"  
-  source  = "stacksimplify/staticwebsitepublic/azurerm"
-  version = "1.0.0"
+  source  = "Mubo8888/staticwebsitepublic/azurerm"
+  version = "1.0.1"
 
   # Resource Group
   location            = "westeurope"
