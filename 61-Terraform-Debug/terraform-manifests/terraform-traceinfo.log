@@ -1,0 +1,21 @@
+2025-01-22T16:44:54.346+0100 [INFO]  Terraform version: 1.10.3
+2025-01-22T16:44:54.348+0100 [INFO]  Go runtime version: go1.23.3
+2025-01-22T16:44:54.348+0100 [INFO]  CLI args: []string{"c:\\Appl\\terraform.exe", "plan", "-out", "main.tfplan"}
+2025-01-22T16:44:54.358+0100 [INFO]  Loading CLI configuration from C:\Users\MBOUTEFE\AppData\Roaming\terraform.d\credentials.tfrc.json
+2025-01-22T16:44:54.361+0100 [INFO]  CLI command args: []string{"plan", "-out", "main.tfplan"}
+2025-01-22T16:44:55.101+0100 [INFO]  backend/local: starting Plan operation
+2025-01-22T16:44:55.525+0100 [INFO]  provider: configuring client automatic mTLS
+2025-01-22T16:44:55.987+0100 [INFO]  provider.terraform-provider-azurerm_v4.16.0_x5.exe: configuring server automatic mTLS: timestamp="2025-01-22T16:44:55.983+0100"
+2025-01-22T16:44:56.349+0100 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.16.0/windows_amd64/terraform-provider-azurerm_v4.16.0_x5.exe id=23228
+2025-01-22T16:44:56.372+0100 [INFO]  provider: configuring client automatic mTLS
+2025-01-22T16:44:56.635+0100 [INFO]  provider.terraform-provider-azurerm_v4.16.0_x5.exe: configuring server automatic mTLS: timestamp="2025-01-22T16:44:56.634+0100"
+2025-01-22T16:44:56.713+0100 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.16.0/windows_amd64/terraform-provider-azurerm_v4.16.0_x5.exe id=21736
+2025-01-22T16:44:56.714+0100 [INFO]  backend/local: plan calling Plan
+2025-01-22T16:44:56.721+0100 [INFO]  provider: configuring client automatic mTLS
+2025-01-22T16:44:56.935+0100 [INFO]  provider.terraform-provider-azurerm_v4.16.0_x5.exe: configuring server automatic mTLS: timestamp="2025-01-22T16:44:56.932+0100"
+2025-01-22T16:44:56.993+0100 [ERROR] provider.terraform-provider-azurerm_v4.16.0_x5.exe: Response contains error diagnostic: diagnostic_detail="" tf_proto_version=5.7 tf_req_id=bf518fa1-2756-e4e4-4c0f-44b2c9224be8 diagnostic_severity=ERROR diagnostic_summary="`subscription_id` is a required provider property when performing a plan/apply operation" tf_provider_addr=registry.terraform.io/hashicorp/azurerm tf_rpc=Configure @caller=github.com/hashicorp/terraform-plugin-go@v0.25.0/tfprotov5/internal/diag/diagnostics.go:58 @module=sdk.proto timestamp="2025-01-22T16:44:56.993+0100"
+2025-01-22T16:44:56.994+0100 [ERROR] vertex "provider[\"registry.terraform.io/hashicorp/azurerm\"]" error: `subscription_id` is a required provider property when performing a plan/apply operation
+2025-01-22T16:44:56.995+0100 [WARN]  Planning encountered errors, so plan is not applyable
+2025-01-22T16:44:56.995+0100 [INFO]  backend/local: plan operation completed
+2025-01-22T16:44:56.995+0100 [INFO]  backend/local: writing plan output to: main.tfplan
+2025-01-22T16:44:57.051+0100 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.16.0/windows_amd64/terraform-provider-azurerm_v4.16.0_x5.exe id=13600
